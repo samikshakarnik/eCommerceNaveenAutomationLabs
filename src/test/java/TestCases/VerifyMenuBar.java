@@ -14,7 +14,7 @@ public class VerifyMenuBar extends BaseClass {
 	public void menuBar() throws Exception {
 
 //code to check all the links in menubar are click able or not
-		
+		//test=extent.createTest("login test case");
 		MenuBar obj = new MenuBar(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		 Actions a = new Actions(driver);

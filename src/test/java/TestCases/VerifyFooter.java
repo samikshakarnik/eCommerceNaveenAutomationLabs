@@ -12,7 +12,7 @@ public class VerifyFooter extends BaseClass {
 	public void footer() throws Exception {
 
 //This code checks all the links are click able or not
-		
+		//test=extent.createTest("login test case");
 		Footer obj = new Footer(driver);
 		Thread.sleep(3000);
 		obj.linktofooter().click();

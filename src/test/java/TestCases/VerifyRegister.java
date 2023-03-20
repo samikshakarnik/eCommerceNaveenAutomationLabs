@@ -18,8 +18,8 @@ public class VerifyRegister extends BaseClass {
 	public void registerUser() throws Exception {
 
 //Register new user, fetching data from excel
-		
-		FileInputStream fs = new FileInputStream("C:\\Users\\Samiksha\\Desktop\\software testing\\Practexcel.xlsx");
+		//test=extent.createTest("login test case");
+		FileInputStream fs = new FileInputStream("C:\\Users\\Samiksha\\git\\eComNaveenAutomation\\eComNaveenAutomation\\Practexcel.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		XSSFSheet sheet = workbook.getSheetAt(7);
 		Row row = sheet.getRow(1);

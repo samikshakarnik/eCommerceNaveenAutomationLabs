@@ -11,6 +11,7 @@ public class VerifyAddToCart extends BaseClass {
 	@Test
 	public void addToCartt() throws Exception {
 
+		
 		AddToCart obj = new AddToCart(driver);
 		Thread.sleep(3000);
 

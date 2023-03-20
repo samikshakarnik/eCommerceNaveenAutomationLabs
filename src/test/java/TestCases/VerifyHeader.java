@@ -11,7 +11,7 @@ public class VerifyHeader extends BaseClass {
 	public void header() throws Exception {
 
 //This code check all the header links are click able or not
-		
+		//test=extent.createTest("login test case");
 		Header obj = new Header(driver);
 		Thread.sleep(3000);
 		obj.clickoncurrency().click();

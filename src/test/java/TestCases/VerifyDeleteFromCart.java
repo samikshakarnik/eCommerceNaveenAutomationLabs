@@ -11,6 +11,7 @@ public class VerifyDeleteFromCart extends BaseClass {
 	@Test
 	public void deleteFromCart() throws Exception {
 
+		//test=extent.createTest("login test case");
 		DeleteFromCart obj = new DeleteFromCart(driver);
 		
 //Delete from shopping cart		

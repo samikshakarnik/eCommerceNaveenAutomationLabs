@@ -12,7 +12,7 @@ public class VerifyProductComparison extends BaseClass{
 	public void productComparison() throws Exception {
 		
 //Product Comparison and fetching basic product details from the table
-		
+		//test=extent.createTest("login test case");
 		ProductComparison obj = new ProductComparison(driver);
 		obj.searchItem().sendKeys(Constants.searchBox);
 		Thread.sleep(5000);

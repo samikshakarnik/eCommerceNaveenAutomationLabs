@@ -19,7 +19,7 @@ public class VerifyLogin extends BaseClass {
 	public void loginUser() throws Exception {
 		
 //Login Page, fetching data from excel
-		
+		//test=extent.createTest("login test case");
 		FileInputStream fs = new FileInputStream("C:\\Users\\Samiksha\\Desktop\\software testing\\Practexcel.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(fs);
 		XSSFSheet sheet = workbook.getSheetAt(7);

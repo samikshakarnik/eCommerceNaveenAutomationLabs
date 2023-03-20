@@ -15,6 +15,7 @@ public class VerifyCheckoutProcess extends BaseClass {
 	@Test
 	public void checkOutProcess() throws Exception {
 
+		 // test=extent.createTest("login test case");
 //Steps for Checkout Procedure 
 		CheckoutProcess obj = new CheckoutProcess(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

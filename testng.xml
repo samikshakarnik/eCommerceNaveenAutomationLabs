@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
+	<listeners>
+		<listener class-name="com.Listener.ListenerClass"></listener>
+	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="TestCases.VerifyRegister"/>
-			<class name="TestCases.VerifyLogin"/>
-			<class name="TestCases.VerifyContactUsForm"/>
-			<class name="TestCases.VerifyHeader"/>
-			<class name="TestCases.VerifyMenuBar"/>
-			<class name="TestCases.VerifyFooter"/>
+			<class name="TestCases.VerifyRegister" />
+			<class name="TestCases.VerifyLogin" />
+			<class name="TestCases.VerifyContactUsForm" />
+			<class name="TestCases.VerifyHeader" />
+			<class name="TestCases.VerifyMenuBar" />
+			<class name="TestCases.VerifyFooter" />
 			<class name="TestCases.VerifyAddToCart" />
-			<class name="TestCases.VerifyDeleteFromCart"/>
-			<class name="TestCases.VerifyProductComparison"/>
-			<class name="TestCases.VerifyCheckoutProcess"/>
+			<class name="TestCases.VerifyDeleteFromCart" />
+			<class name="TestCases.VerifyProductComparison" />
+			<class name="TestCases.VerifyCheckoutProcess" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
