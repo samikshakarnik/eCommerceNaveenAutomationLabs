@@ -1,5 +1,7 @@
 package TestCases;
 
+import java.time.Duration;
+
 import org.testng.annotations.Test;
 
 import PageObjectModel.Header;
@@ -11,18 +13,17 @@ public class VerifyHeader extends BaseClass {
 	public void header() throws Exception {
 
 //This code check all the header links are click able or not
-		//test=extent.createTest("login test case");
+		// test=extent.createTest("login test case");
 		Header obj = new Header(driver);
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		obj.clickoncurrency().click();
-		Thread.sleep(3000);
 
 		try {
-			commonMethods.handleAssertions(obj.currencyDropDown().getText(), "€ Euro" , "It is not Working");
+			commonMethods.handleAssertions(obj.currencyDropDown().getText(), "€ Euro", "It is not Working");
 		} catch (AssertionError exe) {
 			System.out.println("Currency Drop Down is not Clickable");
 		}
-		Thread.sleep(3000);
 
 		try {
 			commonMethods.handleAssertions(obj.clickphoneNo().getText(), "123456789", "it is not working");
@@ -30,9 +31,7 @@ public class VerifyHeader extends BaseClass {
 			System.out.println("soft assert fail");
 		}
 
-		Thread.sleep(3000);
 		obj.clickmyAccount().click();
-		Thread.sleep(3000);
 
 		try {
 			commonMethods.handleAssertions(obj.myAccountDropDown().getText(), "Register", "it is not working");
@@ -40,7 +39,6 @@ public class VerifyHeader extends BaseClass {
 			System.out.println("soft assert fail");
 		}
 
-		Thread.sleep(3000);
 		obj.clickWishList().click();
 
 		try {

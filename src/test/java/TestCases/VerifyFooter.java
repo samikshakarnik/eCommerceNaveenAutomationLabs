@@ -1,10 +1,11 @@
 package TestCases;
 
+import java.time.Duration;
+
 import org.testng.annotations.Test;
 
 import PageObjectModel.Footer;
 import Resources.BaseClass;
-
 
 public class VerifyFooter extends BaseClass {
 
@@ -12,17 +13,16 @@ public class VerifyFooter extends BaseClass {
 	public void footer() throws Exception {
 
 //This code checks all the links are click able or not
-		//test=extent.createTest("login test case");
+		// test=extent.createTest("login test case");
 		Footer obj = new Footer(driver);
-		Thread.sleep(3000);
-		obj.linktofooter().click();
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+		obj.linktofooter().click();
 		for (int i = 0; i < obj.noOfLink().size(); i++) {
-			Thread.sleep(3000);
+
 			System.out.println("Link: " + obj.noOfLink().get(i).getText().toUpperCase());
 			obj.noOfLink().get(i).click();
-			Thread.sleep(3000);
+
 			if (obj.noOfLink().get(i).isEnabled()) {
 				System.out.println("Link Clickable= " + obj.noOfLink().get(i).isEnabled());
 			} else {

@@ -2,6 +2,7 @@ package TestCases;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.time.Duration;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -34,6 +35,7 @@ public class VerifyLogin extends BaseClass {
 		//System.out.println(Password);
 		
 		Login obj = new Login(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		obj.navigateToMyAc().click();
 		obj.navigateToLogin().click();
 		obj.enterEmail().sendKeys(Email);

@@ -2,6 +2,7 @@ package TestCases;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.time.Duration;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -44,6 +45,7 @@ public class VerifyRegister extends BaseClass {
 		System.out.println(Password);
 		
 		Register obj = new Register(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		obj.navigateToMyAc().click();
 		obj.navigateToRegister().click();
 		obj.enterName().sendKeys(Firstname);
@@ -53,10 +55,8 @@ public class VerifyRegister extends BaseClass {
 		obj.enterPassword().sendKeys(Password);
 		obj.enterConfirmPW().sendKeys(Password);
 		obj.Checkagree().click();
-		Thread.sleep(7000);
 		obj.clickContinue().click();
-		Thread.sleep(7000);
-		
+			
 	}
 
 }

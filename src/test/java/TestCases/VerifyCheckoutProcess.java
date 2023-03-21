@@ -15,7 +15,7 @@ public class VerifyCheckoutProcess extends BaseClass {
 	@Test
 	public void checkOutProcess() throws Exception {
 
-		 // test=extent.createTest("login test case");
+		// test=extent.createTest("login test case");
 //Steps for Checkout Procedure 
 		CheckoutProcess obj = new CheckoutProcess(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -31,21 +31,15 @@ public class VerifyCheckoutProcess extends BaseClass {
 
 		obj.atcBT().click();
 		obj.clickATC().click();
-		Thread.sleep(3000);
 		obj.viewCart().click();
-		Thread.sleep(3000);
 
 //Edit quantity of products from view cart		
 
 		obj.changeQty().click();
 		obj.changeQty().clear();
-		Thread.sleep(3000);
 		obj.changeQty().sendKeys("1");
-		Thread.sleep(3000);
 		obj.updateQty().click();
-		Thread.sleep(3000);
 		obj.checkOutBT().click();
-		Thread.sleep(3000);
 
 //Filling Checkout details as a guest		
 
@@ -70,10 +64,7 @@ public class VerifyCheckoutProcess extends BaseClass {
 // it throws unsuccessful checkout error
 
 		obj.continue1bt().click();
-		Thread.sleep(3000);
 		System.out.println(obj.alertmsg().getText());
-		Thread.sleep(3000);
-
 	}
 
 }
